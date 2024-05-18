@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Header from './Header';
+import Footer from './Footer';
+import Section1 from './Section1';
+import exampleImage from './images/dog.png'; // 画像ファイルのパスを指定
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <main>
+        <h1>Hello, World!</h1>
+        <p>This is a web site for my first project.</p>
+        <Section1 />
+        <img src={exampleImage} alt="Example" />
+      </main>
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
